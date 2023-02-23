@@ -2,7 +2,7 @@
 
 // issue 1
 let username = prompt('Enter a new username:')
-if(username.length > 2){
+if(username.length >= 4){
   if(username[0] === 'a'){
     alert('Your username can not start with a')
   } else {
@@ -14,41 +14,46 @@ if(username.length > 2){
 
 
 // issue 2
-// let userAgeAnswer = prompt('Are you older than 21? Answer yes or no.')
-// if(userAgeAnswer > 21){
-//   alert('Awesome, welcome to our website!')
-// } else {
-//   alert('Visit us when you are 21!')
-// }
+let userAgeAnswer = prompt('Are you older than 21? Answer yes or no.')
+console.log(userAgeAnswer)
+if(userAgeAnswer === "yes"){
+   alert('Awesome, welcome to our website!')
+ } else {
+   alert('Visit us when you are 21!')
+ }
 
 // issue 3
-// let defaultValues = {
-//   message: 'This department has joined with customer service. Please view the customer service page for more details.',
-//   phoneExt: 361
-// }
-// let userInput = prompt('Please enter the phone extension for the department you want to submit a ticket for.')
-// if(defaultValues.phoneExt === userInput){
-//   alert(defaultValues.message)
-// } 
+let defaultValues = {
+   message: 'This department has joined with customer service. Please view the customer service page for more details.',
+   phoneExt: 361
+ }
+ let userInput = prompt('Please enter the phone extension for the department you want to submit a ticket for.')
+ if(defaultValues.phoneExt === Number(userInput)){
+   alert(defaultValues.message)
+ } else {
+    alert("fail")
+ }
 
 // issue 4
-// let firstName = prompt('Enter your first name:')
-// let lastName = prompt('Enter your last name:')
+ let firstName = prompt('Enter your first name:')
+let lastName = prompt('Enter your last name:')
 
-// if(firstName || lastName){
-//   createUserName(firstName, lastName)
-// } else {
-//   alert('Please enter a first and last name.')
-// }
+ if(firstName && lastName){
+  createUserName(firstName, lastName)
+ } else {
+   alert('error: Please enter a first and last name.')
+ }
 
-// function createUserName(name1, name2) {
-//   let name = `${name1}  ${name2}`
-//   alert(`Thank you ${name}`)
-// }
+function createUserName(name1, name2) {
+  let name = `${name1}  ${name2}`
+   alert(`Thank you ${name}`)
+ }
 
 // issue 5
-// let userResponse = prompt('Please rate your experience from 1-10.')
-// let numValue = Math.round(Number(userResponse))
-// if (numValue > 0 && numValue <= 10) {
-//   alert(`Thank you for your response.`)
-// }
+ let userResponse = prompt('Please rate your experience from 1-10.')
+ let numValue = Math.round(Number(userResponse))
+ if (numValue > 0 && numValue <= 10) {
+   alert(`Thank you for your response.`)
+ } else{
+  alert("the value entered is invalid. Please enter a number between 1 and 10")
+ }
